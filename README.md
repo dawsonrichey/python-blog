@@ -33,3 +33,6 @@ pip install pytz
 python manage.py makemigrations blog
 python manage.py sqlmigrate blog 0001
 python manage.py migrate
+-----------------------------------------------
+python manage.py createsuperuser
+python manage.py runserver
