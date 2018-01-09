@@ -36,3 +36,24 @@ python manage.py migrate
 -----------------------------------------------
 python manage.py createsuperuser
 python manage.py runserver
+-----------------------------
+python manage.py shell
+    from django.contrib.auth.models import User
+    from blog.models import Post
+    user = User.objects.get(username='admin')
+    Post.objects.create(title='One more post',slug='one-more-post',body='Post body.',author=user)
+    <Post: One more post>
+----------------------------------
+Post.title="New Title"
+all_posts = Post.objects.all()
+Post.objects.all()
+--query set
+Post.objects.filter(publish__year=2018)
+Post.object.filter(publish__year=2018, author__username='admin')
+Post.object.filter(publish__year)=2016)\
+.filter(author__username='admin')
+.exclude(title__startswith='why')
+Post.objects.order_by('-title')
+post = Post.objects.get(id=1)
+post.delete()
+---------------------------------------------------------------
