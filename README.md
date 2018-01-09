@@ -28,3 +28,8 @@ python manage.py runserver
 from the root directory mysite
 ---------------------------------------------------------------
 python manage.py startapp blog
+--------------------------------------------------------------
+pip install pytz
+python manage.py makemigrations blog
+python manage.py sqlmigrate blog 0001
+python manage.py migrate
