@@ -14,3 +14,17 @@ pip install Django==1.8.6
 python
 import django
 django.VERSION
+____________________________
+Start Project
+____________________________
+
+django-admin startproject mysite
+cd mysite
+python manage.py migrate
+python manage.py runserver
+----------------------------------------------------------
+/* python manage.py runserver 127.0.0.1:8001 */
+    go to django wsgi to learn to deploy for production
+from the root directory mysite
+---------------------------------------------------------------
+python manage.py startapp blog
